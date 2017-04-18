@@ -20,8 +20,8 @@ JSVC_OPTS="
   -classpath /usr/share/java/commons-daemon.jar:${BASEDIR}/lib/ace.jar
   -pidfile ${PIDFILE}
   -procname unifi
-  -outfile ${LOGDIR}/unifi.log
-  -errfile ${LOGDIR}/unifi.log
+  -outfile ${LOGDIR}/unifi.out.log
+  -errfile ${LOGDIR}/unifi.err.log
   ${JVM_OPTS}"
 
 # One issue might be no cron and lograte, causing the log volume to become bloated over time! Consider `-keepstdin` and `-errfile &2` options for JSVC.
